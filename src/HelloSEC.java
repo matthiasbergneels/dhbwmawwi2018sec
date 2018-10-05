@@ -1,0 +1,6 @@
+public class HelloSEC {
+
+    public static void main(String[] args){
+        System.out.println("Hello SEC");
+    }
+}
