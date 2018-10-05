@@ -2,7 +2,7 @@
 
 ## FAQ
 Wo finde ich das Skript?
-* [Skript](https://gitlab.mubn.de/)(PDF Download)
+* [Skript](https://gitlab.mubn.de/mubn/dhbwmawwi2018sec/blob/master/Vorlesung/ProgrammierenSkript.pdf)(PDF Download)
 
 
 Welche IDE wird verwendet? 
