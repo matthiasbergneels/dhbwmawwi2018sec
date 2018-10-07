@@ -10,3 +10,9 @@ Welche IDE wird verwendet?
 * Kostenfreie Studierenden-Lizensen können mit der DHBW Emailadresse [hier](https://www.jetbrains.com/student/) beantragt werden 
 
 
+Wie wird GitLab und das Repository verwendet?
+* In erster Linie um alle Dokumente und Beispiele nachzuvollziehen --> lesend
+* Gerne auch Anemldung mit GitLab User
+  * anlegen eines eigenen Branches und teilen der eigenen Beispiele mit anderen
+  * Übung zum nutzen von Code-Repositories!
+
