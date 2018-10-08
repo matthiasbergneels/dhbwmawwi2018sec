@@ -1,6 +1,6 @@
 package kapitel3;
 
-public class typConversion {
+public class TypeConversion {
 
     public static void main(String[] args){
 
