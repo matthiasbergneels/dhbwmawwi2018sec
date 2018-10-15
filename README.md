@@ -2,12 +2,13 @@
 
 ## FAQ
 Wo finde ich das Skript?
-* [Skript](https://gitlab.mubn.de/mubn/dhbwmawwi2018sec/blob/master/Vorlesung/ProgrammierenSkript.pdf)(PDF Download)
+* [Skript](https://gitlab.mubn.de/mubn/programmierenskript/blob/master/download/ProgrammierenSkript.pdf)(PDF Download)
 
 
 Welche IDE wird verwendet? 
 * IntelliJ von [Jetbrains](http://www.jetbrains.de)
-* Kostenfreie Studierenden-Lizensen können mit der DHBW Emailadresse [hier](https://www.jetbrains.com/student/) beantragt werden 
+* Kostenfreie Studierenden-Lizensen können mit der DHBW Emailadresse [hier](https://www.jetbrains.com/student/) beantragt werden
+* Im Falle von Aktivierungsproblemen: [sales@jetbrains.com](mailto:sales@jetbrains.com) (Englisch) 
 
 
 Wie wird GitLab und das Repository verwendet?
