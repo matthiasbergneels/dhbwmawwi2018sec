@@ -16,6 +16,25 @@ public class ArrayExample {
         myTextBlocks[2] = "Good Evening";
         //myTextBlocks[15] = "Shit";
 
+        // Ausgabe in Zählerschleife
+        for(int i = 0; i < myTextBlocks.length; i++){
+            System.out.println("Index " + i + ": " + myTextBlocks[i]);
+        }
+
+
+        // For-Each
+        for(String text : myTextBlocks){
+            System.out.println(text);
+        }
+
+        // while
+        int count = 0;
+        while(count < myTextBlocks.length){
+            System.out.println("Index " + count + ": " + myTextBlocks[count]);
+            count++;
+        }
+
+
         System.out.println(myTextBlocks[1]);
 
 
