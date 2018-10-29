@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8f664da-7b31-4939-b03f-52ec2a139b31" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Dokumente/ProgrammierenSkript.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Dokumente/Übungen Programmierung 1.pdf" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,8 +58,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="360">
-                <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <first_editor relative-caret-position="96">
+                <caret line="4" column="108" lean-forward="false" selection-start-line="4" selection-start-column="108" selection-end-line="4" selection-end-column="108" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -456,7 +453,7 @@
       <workItem from="1539014427127" duration="7967000" />
       <workItem from="1539612299537" duration="9826000" />
       <workItem from="1540217345264" duration="10319000" />
-      <workItem from="1540818662293" duration="475000" />
+      <workItem from="1540818662293" duration="548000" />
     </task>
     <task id="LOCAL-00001" summary="Adding IntelliJ Project and Java Code Example">
       <created>1538775500821</created>
@@ -532,7 +529,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33628000" />
+    <option name="totallyTimeSpent" value="33701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3640" y="23" width="1720" height="1345" extended-state="0" />
@@ -1036,8 +1033,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="360">
-            <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <first_editor relative-caret-position="96">
+            <caret line="4" column="108" lean-forward="false" selection-start-line="4" selection-start-column="108" selection-end-line="4" selection-end-column="108" />
             <folding />
           </first_editor>
           <second_editor />
