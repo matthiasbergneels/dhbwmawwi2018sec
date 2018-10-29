@@ -12,7 +12,8 @@ Welche IDE wird verwendet?
 
 
 Wie wird GitLab und das Repository verwendet?
-* In erster Linie um alle Dokumente und Beispiele nachzuvollziehen --> lesend
-* Gerne auch Anmeldung mit GitLab User
-  * anlegen eines eigenen Branches und teilen der eigenen Beispiele mit anderen
-  * Übung zum nutzen von Code-Repositories!
+* ~~In erster Linie um alle Dokumente und Beispiele nachzuvollziehen --> lesend~~
+* ~~Gerne auch Anmeldung mit GitLab User~~
+  * ~~anlegen eines eigenen Branches und teilen der eigenen Beispiele mit anderen~~
+  * ~~Übung zum nutzen von Code-Repositories!~~
+* **GitLab ist tot - es lebe Github** 
