@@ -2,13 +2,21 @@ package kapitel5;
 
 public class Car {
 
-    final int hp;
-    String color;
-    String type;
-    String brand;
-    boolean convertible;
-    double speed;
-    String licensePlate;
+    private final int hp;
+    private String color;
+    private String type;
+    private String brand;
+    private boolean convertible;
+    private double speed;
+    private String licensePlate;
+
+    private String[] allowedBrands = {
+      "Mercedes",
+      "BMW",
+      "Ford",
+      "Tesla",
+      "Audi"
+    };
 
     Car(String licensePlate, int hp, String type,
         String color, String brand, boolean convertible){
@@ -16,7 +24,8 @@ public class Car {
         this.licensePlate = licensePlate;
         this.hp = hp;
         this.type = type;
-        this.color = color;
+        //this.color = color;
+        this.setColor(color);
         this.brand = brand;
         this.convertible = convertible;
 
@@ -39,5 +48,67 @@ public class Car {
 
     String caughtInSpeedTrap(){
         return licensePlate;
+    }
+
+
+    public int getHp(){
+        return this.hp;
+    }
+
+    public String getColor(){
+        return this.color;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public boolean isConvertible() {
+        return convertible;
+    }
+
+    public double getSpeed() {
+        return speed;
+    }
+
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
+    public void setColor(String color){
+
+        color = color.toLowerCase();
+
+        switch(color){
+            case "blau":
+            case "rot":
+            case "schwarz":
+            case "silber":
+                this.color = color;
+                break;
+            default:
+                this.color = "silber";
+        }
+
+    }
+
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
+    }
+
+    private void setBrand(String brand) {
+
+        for(String allowedBrand : allowedBrands){
+            if(allowedBrand.equalsIgnoreCase(brand)){  // anstatt: allowedBrand == brand
+                this.brand = brand;
+                return;
+            }
+        }
+
+        this.brand = allowedBrands[0];
     }
 }
