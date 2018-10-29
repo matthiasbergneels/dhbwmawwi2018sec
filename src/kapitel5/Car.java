@@ -10,7 +10,9 @@ public class Car {
     private double speed;
     private String licensePlate;
 
-    private String[] allowedBrands = {
+    private static int carCounter = 0;
+
+    public final static String[] ALLOWED_BRAND = {
       "Mercedes",
       "BMW",
       "Ford",
@@ -26,10 +28,13 @@ public class Car {
         this.type = type;
         //this.color = color;
         this.setColor(color);
-        this.brand = brand;
+        //this.brand = brand;
+        this.setBrand(brand);
         this.convertible = convertible;
 
         this.speed = 0;
+
+        carCounter++;
     }
 
     void accelerate(double speedAcceleration){
@@ -102,13 +107,18 @@ public class Car {
 
     private void setBrand(String brand) {
 
-        for(String allowedBrand : allowedBrands){
+        for(String allowedBrand : ALLOWED_BRAND){
             if(allowedBrand.equalsIgnoreCase(brand)){  // anstatt: allowedBrand == brand
                 this.brand = brand;
                 return;
             }
         }
 
-        this.brand = allowedBrands[0];
+        this.brand = ALLOWED_BRAND[0];
+    }
+
+
+    public static int getCarCounter(){
+        return carCounter;
     }
 }
