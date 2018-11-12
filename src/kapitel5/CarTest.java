@@ -10,15 +10,15 @@ public class CarTest {
 
 
         Car myCar = new Car("HD-ZZ 5678", 235, "SUV",
-                "pink", Car.brands.MERCEDES, false);
+                "pink", Car.Brands.MERCEDES, false);
         System.out.println("Aktuelle Anzahl Autos: " + Car.getCarCounter());
 
         Car yourCar = new Car("MA-II 4263", 154, "sportscar",
-                "blau", Car.brands.MERCEDES, true);
+                "blau", Car.Brands.MERCEDES, true);
         System.out.println("Aktuelle Anzahl Autos: " + Car.getCarCounter());
 
         Car thirdCar = new Car("HD-ZZ 5678", 235, "SUV",
-                "pink", Car.brands.TESLA, false);
+                "pink", Car.Brands.TESLA, false);
 
 
         Car anotherCar = myCar;

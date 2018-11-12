@@ -1,4 +1,4 @@
-package uebung.kapitel4;
+package uebungen.kapitel4;
 
 import javax.swing.JOptionPane;
 
