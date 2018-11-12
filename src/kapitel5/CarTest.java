@@ -1,5 +1,7 @@
 package kapitel5;
 
+import java.nio.file.FileSystemNotFoundException;
+
 public class CarTest {
 
     public static void main(String[] args) {
@@ -10,9 +12,11 @@ public class CarTest {
         Car myCar = new Car("HD-ZZ 5678", 235, "SUV",
                 "pink", Car.brands.MERCEDES, false);
         System.out.println("Aktuelle Anzahl Autos: " + Car.getCarCounter());
+
         Car yourCar = new Car("MA-II 4263", 154, "sportscar",
                 "blau", Car.brands.MERCEDES, true);
         System.out.println("Aktuelle Anzahl Autos: " + Car.getCarCounter());
+
         Car thirdCar = new Car("HD-ZZ 5678", 235, "SUV",
                 "pink", Car.brands.TESLA, false);
 
@@ -65,6 +69,26 @@ public class CarTest {
 
         System.out.println("Geblitzt: " + myCar.caughtInSpeedTrap());
         System.out.println("Geblitzt: " + yourCar.caughtInSpeedTrap());
+
+        System.out.println("Aktuelle Anzahl Autos: " + Car.getCarCounter());
+
+        // "Verschrottung" ==> Referenzen löschen
+
+        myCar = null;
+        anotherCar = null;
+
+        yourCar = null;
+
+        thirdCar = null;
+
+        // Garbage Collector räumt jetzt auf!
+        System.gc();
+
+        try {
+            Thread.sleep(5000);
+        }catch(Exception e){
+
+        }
 
         System.out.println("Aktuelle Anzahl Autos: " + Car.getCarCounter());
     }

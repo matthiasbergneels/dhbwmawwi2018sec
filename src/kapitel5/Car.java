@@ -5,14 +5,14 @@ public class Car {
     private final int hp;
     private String color;
     private String type;
-    private brands brand;
+    private Brands brand;
     private boolean convertible;
     private double speed;
     private String licensePlate;
 
     private static int carCounter = 0;
 
-    public enum brands{
+    public enum Brands{
         MERCEDES,
         BMW,
         FORD,
@@ -30,7 +30,7 @@ public class Car {
     */
 
     Car(String licensePlate, int hp, String type,
-        String color, brands brand, boolean convertible){
+        String color, Brands brand, boolean convertible){
 
         this.licensePlate = licensePlate;
         this.hp = hp;
@@ -77,7 +77,7 @@ public class Car {
         return type;
     }
 
-    public brands getBrand() {
+    public Brands getBrand() {
         return brand;
     }
 
@@ -114,7 +114,7 @@ public class Car {
         this.licensePlate = licensePlate;
     }
 
-    private void setBrand(brands brand) {
+    private void setBrand(Brands brand) {
 
         this.brand = brand;
 
@@ -130,6 +130,11 @@ public class Car {
         */
     }
 
+
+    protected void finalize(){
+        carCounter--;
+        System.out.println("Ein Auto wurde verschrottet!");
+    }
 
     public static int getCarCounter(){
         return carCounter;
