@@ -8,13 +8,13 @@ public class CarTest {
 
 
         Car myCar = new Car("HD-ZZ 5678", 235, "SUV",
-                "pink", Car.ALLOWED_BRAND[3], false);
+                "pink", Car.brands.MERCEDES, false);
         System.out.println("Aktuelle Anzahl Autos: " + Car.getCarCounter());
         Car yourCar = new Car("MA-II 4263", 154, "sportscar",
-                "blau", "Mercedes", true);
+                "blau", Car.brands.MERCEDES, true);
         System.out.println("Aktuelle Anzahl Autos: " + Car.getCarCounter());
         Car thirdCar = new Car("HD-ZZ 5678", 235, "SUV",
-                "pink", "Tesla", false);
+                "pink", Car.brands.TESLA, false);
 
 
         Car anotherCar = myCar;
@@ -34,6 +34,7 @@ public class CarTest {
 
 
         System.out.println("myCar Farbe: " + myCar.getColor());
+        System.out.println("myCar Marke: " + myCar.getBrand());
 
         //myCar.licensePlate = "MA-YY 789";
         //myCar.hp = 245;

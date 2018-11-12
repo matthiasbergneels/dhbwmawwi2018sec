@@ -5,13 +5,21 @@ public class Car {
     private final int hp;
     private String color;
     private String type;
-    private String brand;
+    private brands brand;
     private boolean convertible;
     private double speed;
     private String licensePlate;
 
     private static int carCounter = 0;
 
+    public enum brands{
+        MERCEDES,
+        BMW,
+        FORD,
+        TESLA
+    }
+
+    /*
     public final static String[] ALLOWED_BRAND = {
       "Mercedes",
       "BMW",
@@ -19,9 +27,10 @@ public class Car {
       "Tesla",
       "Audi"
     };
+    */
 
     Car(String licensePlate, int hp, String type,
-        String color, String brand, boolean convertible){
+        String color, brands brand, boolean convertible){
 
         this.licensePlate = licensePlate;
         this.hp = hp;
@@ -68,7 +77,7 @@ public class Car {
         return type;
     }
 
-    public String getBrand() {
+    public brands getBrand() {
         return brand;
     }
 
@@ -105,8 +114,11 @@ public class Car {
         this.licensePlate = licensePlate;
     }
 
-    private void setBrand(String brand) {
+    private void setBrand(brands brand) {
 
+        this.brand = brand;
+
+        /*
         for(String allowedBrand : ALLOWED_BRAND){
             if(allowedBrand.equalsIgnoreCase(brand)){  // anstatt: allowedBrand == brand
                 this.brand = brand;
@@ -115,6 +127,7 @@ public class Car {
         }
 
         this.brand = ALLOWED_BRAND[0];
+        */
     }
 
 
