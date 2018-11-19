@@ -30,10 +30,39 @@ public class Bauernhof {
 
         Tier[] tierBoxen = new Tier[5];
 
+
+
         // Narrowing Cast
         tierBoxen[0] = meinBello;
         tierBoxen[1] = deinWuffi;
 
+        tierBoxen[2] = new Vogel(4.0f, 3.0f, "Tweety", true);
+
+        for(Tier tier : tierBoxen){
+            if(tier != null){
+                tier.atmen();
+                tier.bewegen();
+                tier.fressen();
+                //tier.bellen();
+
+                if(tier instanceof Hund){
+                    Hund meinHund = (Hund) tier;
+                    meinHund.bellen();
+                }
+            }
+        }
+
+        Object o = meinBello;
+
+
+
+
+        System.out.println(o.toString());
+
+        o = tierBoxen[2];
+        System.out.println(o.toString());
+
+        /*
         tierBoxen[0].fressen();
         tierBoxen[0].bewegen();
         tierBoxen[0].atmen();
@@ -47,5 +76,6 @@ public class Bauernhof {
         Hund meinHund = (Hund) tierBoxen[0];
         meinHund.bellen();
 
+        */
     }
 }
