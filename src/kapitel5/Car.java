@@ -133,7 +133,7 @@ public class Car {
 
     protected void finalize(){
         carCounter--;
-        System.out.println("Ein Auto wurde verschrottet!");
+        System.out.println("Ein Auto ("+ this.getLicensePlate() +") wurde verschrottet!");
     }
 
     public static int getCarCounter(){

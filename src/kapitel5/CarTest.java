@@ -85,7 +85,7 @@ public class CarTest {
         System.gc();
 
         try {
-            Thread.sleep(5000);
+            Thread.sleep(500);
         }catch(Exception e){
 
         }
