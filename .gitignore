@@ -23,3 +23,13 @@ hs_err_pid*
 
 # Mac Stuff
 .DS_Store
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Decompiled Files
+out/

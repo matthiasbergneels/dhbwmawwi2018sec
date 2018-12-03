@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8f664da-7b31-4939-b03f-52ec2a139b31" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/uebungen/christmas/TurtleExample.java" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,11 +15,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TurtleExample.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TurtleExample.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uebungen/christmas/TurtleExample.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
               <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -89,6 +99,7 @@
         <option value="$PROJECT_DIR$/src/kapitel6/Vogel.java" />
         <option value="$PROJECT_DIR$/src/kapitel6/Bauernhof.java" />
         <option value="$PROJECT_DIR$/src/uebungen/christmas/TurtleExample.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -131,17 +142,6 @@
             <path>
               <item name="dhbwmawwi2018sec" type="b2602c69:ProjectViewProjectNode" />
               <item name="dhbwmawwi2018sec" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dhbwmawwi2018sec" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dhbwmawwi2018sec" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dhbwmawwi2018sec" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dhbwmawwi2018sec" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="uebungen" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -401,7 +401,7 @@
       <workItem from="1540818662293" duration="9736000" />
       <workItem from="1542294690743" duration="92000" />
       <workItem from="1542639198147" duration="8064000" />
-      <workItem from="1543837434240" duration="431000" />
+      <workItem from="1543837434240" duration="737000" />
     </task>
     <task id="LOCAL-00001" summary="Adding IntelliJ Project and Java Code Example">
       <created>1538775500821</created>
@@ -477,7 +477,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59625000" />
+    <option name="totallyTimeSpent" value="59931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="971" extended-state="6" />
@@ -638,6 +638,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding />
         </state>
       </provider>
