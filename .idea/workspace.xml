@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8f664da-7b31-4939-b03f-52ec2a139b31" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ProgrammierenSkript/Weihnachten/aplujar5.zip" />
+      <change beforePath="$PROJECT_DIR$/ProgrammierenSkript/Weihnachten/apluLib/readme.txt" afterPath="$PROJECT_DIR$/ProgrammierenSkript/Weihnachten/aplujar5/readme.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -143,6 +143,24 @@
               <item name="dhbwmawwi2018sec" type="b2602c69:ProjectViewProjectNode" />
               <item name="dhbwmawwi2018sec" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="dhbwmawwi2018sec" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhbwmawwi2018sec" type="462c0819:PsiDirectoryNode" />
+              <item name="ProgrammierenSkript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhbwmawwi2018sec" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhbwmawwi2018sec" type="462c0819:PsiDirectoryNode" />
+              <item name="ProgrammierenSkript" type="462c0819:PsiDirectoryNode" />
+              <item name="Weihnachten" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhbwmawwi2018sec" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhbwmawwi2018sec" type="462c0819:PsiDirectoryNode" />
+              <item name="ProgrammierenSkript" type="462c0819:PsiDirectoryNode" />
+              <item name="Weihnachten" type="462c0819:PsiDirectoryNode" />
+              <item name="aplujar5" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -163,8 +181,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ProgrammierenSkript/Weihnachten/apluLib" />
       <recent name="$PROJECT_DIR$/ProgrammierenSkript/Weihnachten" />
+      <recent name="$PROJECT_DIR$/ProgrammierenSkript/Weihnachten/apluLib" />
       <recent name="$PROJECT_DIR$/ProgrammierenSkript" />
       <recent name="$PROJECT_DIR$/Dokumente" />
       <recent name="$PROJECT_DIR$/Dokumente/Uebungen" />
@@ -401,7 +419,7 @@
       <workItem from="1540818662293" duration="9736000" />
       <workItem from="1542294690743" duration="92000" />
       <workItem from="1542639198147" duration="8064000" />
-      <workItem from="1543837434240" duration="737000" />
+      <workItem from="1543837434240" duration="1071000" />
     </task>
     <task id="LOCAL-00001" summary="Adding IntelliJ Project and Java Code Example">
       <created>1538775500821</created>
@@ -477,11 +495,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59931000" />
+    <option name="totallyTimeSpent" value="60265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="971" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -496,7 +513,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24103832" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24103832" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
