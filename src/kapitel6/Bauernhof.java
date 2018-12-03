@@ -12,8 +12,6 @@ public class Bauernhof {
         meinTier.fressen();
     */
 
-
-
         Hund meinBello = new Hund(30.0f, 15.0f, "Bello", "Pitbull");
         Hund deinWuffi = new Hund(99.0f, 70.0f, "Wuffi", "Deutsche Dogge");
 
@@ -46,6 +44,7 @@ public class Bauernhof {
                 //tier.bellen();
 
                 if(tier instanceof Hund){
+                    // widening cast
                     Hund meinHund = (Hund) tier;
                     meinHund.bellen();
                 }
