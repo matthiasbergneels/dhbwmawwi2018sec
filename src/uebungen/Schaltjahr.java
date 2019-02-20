@@ -4,7 +4,7 @@ public class Schaltjahr {
 
     public static void main(String[] args) {
 
-        int jahr = 1900; // Integer.parseInt(args[0]);
+        int jahr = 1999; // Integer.parseInt(args[0]);
         int istSchaltjahr;
 
         istSchaltjahr = pruefeSchaltjahr(jahr);
@@ -27,7 +27,13 @@ public class Schaltjahr {
             return 0;
         }
 
+        if(jahr % 4 == 0 && (jahr % 100 != 0 || jahr % 400 == 0)){
+            return 1;
+        }else{
+            return 2;
+        }
 
+        /*
         if(jahr % 4 == 0){
             if(jahr % 100 == 0){
                 if(jahr % 400 == 0){
@@ -41,6 +47,7 @@ public class Schaltjahr {
         }else{
             return 2;
         }
+        */
     }
 }
 
