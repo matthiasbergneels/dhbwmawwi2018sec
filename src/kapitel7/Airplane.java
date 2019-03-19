@@ -23,9 +23,9 @@ public class Airplane implements Bookable{
     }
 
     @Override
-    public boolean book(int count) {
+    public void book(int count) throws NotEnoughFreeSpaces{
         if(availableSpaces() < count){
-            return false;
+            throw new NotEnoughFreeSpaces(availableSpaces());
         }else {
             for(int i = 0; i < seats.length; i++){
                 for(int j = 0; j < seats[i].length; j++){
@@ -35,7 +35,6 @@ public class Airplane implements Bookable{
                     }
                 }
             }
-            return true;
         }
 
     }

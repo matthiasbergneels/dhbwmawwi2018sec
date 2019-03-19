@@ -12,7 +12,11 @@ public class TravelAgency {
 
         for(Bookable entity : bookables){
             System.out.println("Freie Plätze: " + entity.availableSpaces());
-            entity.book(10);
+            try {
+                bookables[0].book(10);
+            } catch (NotEnoughFreeSpaces notEnoughFreeSpaces) {
+                System.out.println(notEnoughFreeSpaces.getMessage());
+            }
             System.out.println("Freie Plätze: " + entity.availableSpaces());
 
             if(entity instanceof Airplane){
@@ -23,7 +27,19 @@ public class TravelAgency {
 
         }
         System.out.println("Freie Plätze: " + bookables[0].availableSpaces());
-        bookables[0].book(10);
+        try {
+            bookables[0].book(10);
+            bookables[10].book(1);
+        } catch (NotEnoughFreeSpaces notEnoughFreeSpaces) {
+            System.out.println(notEnoughFreeSpaces.getMessage());
+        } catch(Exception e){
+            System.out.println("irgendein Fehler - hat doch alles kein Sinn!");
+            return;
+        }finally{
+
+            System.out.println("Niemand kann mich aufhalten!");
+
+        }
         System.out.println("Freie Plätze: " + bookables[0].availableSpaces());
 
 

@@ -16,11 +16,16 @@ public class Hotel implements Bookable{
     }
 
     @Override
-    public boolean book(int count) {
-        if(availableSpaces() > count){
-            bookedRoomsCount = bookedRoomsCount + count;
-            return true;
+    public void book(int count) throws NotEnoughFreeSpaces {
+        if(availableSpaces() < count){
+            // Ausnahmesituation
+
+            throw new NotEnoughFreeSpaces(availableSpaces());
+
+
         }
-        return false;
+
+        bookedRoomsCount = bookedRoomsCount + count;
+
     }
 }
