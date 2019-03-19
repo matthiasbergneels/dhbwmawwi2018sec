@@ -7,8 +7,6 @@ import uebungen.kapitel8.autositze.AutoSitz;
 
 public class AutoSitzeTest {
 
-
-
     @Test
     public void createSeatSuccessful() throws FalscheParameter{
         String color = "schwarz";
@@ -23,18 +21,24 @@ public class AutoSitzeTest {
     }
 
     @Test
-    public void createSeatWithInvalidParameters(){
+    public void createSeatSuccessfulWhiteLeather() throws FalscheParameter{
+        String color = "weiss";
+        boolean leather = true;
+
+        AutoSitz mySeat = new AutoSitz(leather, color);
+
+        Assert.assertEquals(color, mySeat.getFarbe());
+        Assert.assertEquals(leather, mySeat.isLedersitze());
+        // alternative
+        // Assert.assertFalse(mySeat.isLedersitze());
+    }
+
+    @Test(expected = FalscheParameter.class)
+    public void tryToCreateSeatWithInvalidParameters() throws Exception{
         String color = "lila";
         boolean leather = true;
 
-        try {
-            AutoSitz mySeat = new AutoSitz(leather, color);
-
-            Assert.fail("Die Ausnahme wurde nicht geworfen");
-        }catch(FalscheParameter e){
-            Assert.assertEquals("Die Parameterkombination Ledersitz true und Farbe lila ist nicht erlaubt!",
-                    e.getMessage());
-        }
+        AutoSitz mySeat = new AutoSitz(leather, color);
 
     }
 
