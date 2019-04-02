@@ -50,4 +50,62 @@ public class Student implements Comparable<Student>{
     public int compareTo(Student o) {
         return this.getStudentId() - o.getStudentId();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        // Alias Check
+        if(this == obj){
+            return true;
+        }
+
+        // Null check
+        if(obj == null){
+            return false;
+        }
+
+        // type check
+        if(this.getClass() != obj.getClass()){
+            return false;
+        }
+
+        // compare Attributes
+        Student student = (Student)obj;
+
+        if(this.getStudentId() != student.getStudentId()){
+            return false;
+        }
+
+        /* --> Adoption to be consistent with compareTo()
+        if(!this.getFamilyName().equals(student.getFamilyName())){
+            return false;
+        }
+
+        if(!this.getName().equals(student.getName())){
+            return false;
+        }
+
+        if(this.getAge() != student.getAge()){
+            return false;
+        }
+        */
+
+        return true;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int hc = 25;
+        int multiply = 59;
+
+        hc = hc * multiply + this.getStudentId();
+
+        /*
+        // do for each attribute from equals!
+        hc = hc * multiply + (this.getFamilyName() == null ? 0 : this.getFamilyName().hashCode() );
+        */
+
+        return hc;
+    }
 }

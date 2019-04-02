@@ -18,12 +18,14 @@ public class StudentSetExample {
 
         // == ==> .equals()
         System.out.println("s1.equals(s2): " + (s1.equals(s2)));
+        System.out.println("s1.hashCode() " + s1.hashCode());
+        System.out.println("s2.hashCode() " + s2.hashCode());
 
         System.out.println("Anzahl Studierende: " + students.size());
 
         System.out.println("Natürlich Ordnung: ");
         for(Student student : students){
-            System.out.println(student.getStudentId() + "; " + student.getFamilyName() + ", " + student.getName());
+            System.out.println(student.getStudentId() + "; " + student.getFamilyName() + ", " + student.getName() + ", " + student.hashCode());
         }
 
 
