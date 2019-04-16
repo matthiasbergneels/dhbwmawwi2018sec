@@ -2,6 +2,10 @@ package kapitel10;
 
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.text.ParseException;
 
 import javax.swing.*;
@@ -11,7 +15,12 @@ import javax.swing.text.MaskFormatter;
 
 public class Logon extends JFrame{
 
-    public Logon(){
+    private static final String COMMAND_OK = "OK";
+    private static final String COMMAND_CLOSE = "CLOSE";
+
+    private JTextField host;
+
+    public Logon() throws ParseException{
 
         this.setTitle("Logon");
 
@@ -35,12 +44,7 @@ public class Logon extends JFrame{
         ((GridLayout)connectionPanel.getLayout()).setVgap(15);
         ((GridLayout)filePanel.getLayout()).setVgap(15);
 
-        JFormattedTextField portField = null;
-        try {
-            portField = new JFormattedTextField(new MaskFormatter("#####"));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        final JFormattedTextField portField = new JFormattedTextField(new MaskFormatter("#####"));
 
         //create & assign elements for connection area
         connectionPanel.add(new JPanel(new FlowLayout()).add(new JLabel("User:")));
@@ -50,7 +54,9 @@ public class Logon extends JFrame{
         connectionPanel.add(new JPanel(new FlowLayout()).add(new JLabel("Art:")));
         connectionPanel.add(new JPanel(new FlowLayout()).add(myComboBox));
         connectionPanel.add(new JPanel(new FlowLayout()).add(new JLabel("Host:")));
-        connectionPanel.add(new JPanel(new FlowLayout()).add(new JTextField(7)));
+
+        host = new JTextField(7);
+        connectionPanel.add(new JPanel(new FlowLayout()).add(host));
         connectionPanel.add(new JPanel(new FlowLayout()).add(new JLabel("Port:")));
         connectionPanel.add(new JPanel(new FlowLayout()).add(portField));
 
@@ -62,12 +68,82 @@ public class Logon extends JFrame{
         filePanel.add(new JPanel(new FlowLayout()).add(new JTextField(7)));
 
         // create & assign Buttons
-        JButton okButton = new JButton("Ok");
-        JButton cancelButton = new JButton("Cancel");
+        JButton okButton = new JButton("Okay");
+        okButton.setActionCommand(COMMAND_OK);
+        JButton cancelButton = new JButton("Schliessen");
+        cancelButton.setActionCommand(COMMAND_CLOSE);
+        JButton ok2Button = new JButton("Noch Okayer");
+        ok2Button.setActionCommand(COMMAND_OK);
+
+        JFormattedTextField finalPortField = portField;
+
+        /*
+        ActionListener buttonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getActionCommand().equals(COMMAND_OK)) {                //if(e.getSource() == okButton) {
+                    System.out.println(e.getActionCommand());
+                    System.out.println(e.getModifiers());
+                    System.out.println("Aktuelle Auswahl des Protokolls: " + myComboBox.getSelectedItem());
+                    if (myComboBox.getSelectedItem().equals("FTP")) {
+                        portField.setText("21");
+                    }
+                    host.setText("google.de");
+                }else if (e.getActionCommand().equals(COMMAND_CLOSE)){        //}else if(e.getSource() == cancelButton){
+                    System.exit(0);
+                }
+            }
+        };
+        */
+
+        ActionListener buttonListener = e -> {
+            if (e.getActionCommand().equals(COMMAND_OK)) {
+                System.out.println(e.getActionCommand());
+                System.out.println(e.getModifiers());
+                System.out.println("Aktuelle Auswahl des Protokolls: " + myComboBox.getSelectedItem());
+                if (myComboBox.getSelectedItem().equals("FTP")) {
+                    portField.setText("21");
+                }
+                host.setText("google.de");
+            } else if (e.getActionCommand().equals(COMMAND_CLOSE)){
+                System.exit(0);
+            }
+        };
+
+        /*
+        ItemListener comboBoxListener  = new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+
+
+                System.out.println("Combo Box geändert");
+                System.out.println(e.getStateChange());
+                System.out.println(e.getItem());
+                if(e.getStateChange() == 1) {
+                    if (e.getItem().equals("FTP")) {
+                        portField.setText("21");
+                    } else {
+                        portField.setText("");
+                    }
+                }
+
+            }
+        };
+        */
+
+
+        
+
+        myComboBox.addItemListener(e -> System.out.println((e.getStateChange() == 1) ? ("Selected Item: " + e.getItem()) : ""));
+
+        okButton.addActionListener(buttonListener);
+        cancelButton.addActionListener(buttonListener);
+        ok2Button.addActionListener(buttonListener);
 
 
         southPanel.add(okButton);
         southPanel.add(cancelButton);
+        southPanel.add(ok2Button);
 
 
         // create & assign Borders
@@ -95,7 +171,7 @@ public class Logon extends JFrame{
         this.setVisible(true);
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws ParseException {
         Dimension screenDimension = Toolkit.getDefaultToolkit().getScreenSize();
 
         System.out.println("Screen Dimension: " + screenDimension.getWidth() + " x " + screenDimension.getHeight());
