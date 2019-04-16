@@ -2,10 +2,7 @@ package kapitel10;
 
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.*;
 import java.text.ParseException;
 
 import javax.swing.*;
@@ -132,7 +129,34 @@ public class Logon extends JFrame{
         */
 
 
-        
+        MouseListener mouseButtonListener = new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                ((JButton)e.getSource()).setEnabled(false);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                ((JButton)e.getSource()).setEnabled(true);
+            }
+        };
+
+        cancelButton.addMouseListener(mouseButtonListener);
 
         myComboBox.addItemListener(e -> System.out.println((e.getStateChange() == 1) ? ("Selected Item: " + e.getItem()) : ""));
 
