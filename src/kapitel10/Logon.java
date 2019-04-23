@@ -158,7 +158,7 @@ public class Logon extends JFrame{
 
         cancelButton.addMouseListener(mouseButtonListener);
 
-        myComboBox.addItemListener(e -> System.out.println((e.getStateChange() == 1) ? ("Selected Item: " + e.getItem()) : ""));
+        myComboBox.addItemListener(e -> System.out.println((e.getStateChange() == 1) ? ("Selected Item: " + e.getItem()) : myComboBox.getSelectedItem()));
 
         okButton.addActionListener(buttonListener);
         cancelButton.addActionListener(buttonListener);

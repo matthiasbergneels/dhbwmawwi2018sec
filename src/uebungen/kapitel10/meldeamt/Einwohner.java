@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Einwohner implements Comparable<Einwohner>, Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 2L;
 
     public static String ANREDE_FRAU = "Frau";
     public static String ANREDE_HERR = "Herr";
@@ -14,6 +14,7 @@ public class Einwohner implements Comparable<Einwohner>, Serializable {
     public static String FAMILIENSTAND_VERHEIRATET = "verheiratet";
     public static String FAMILIENSTAND_VERWITWET = "verwitwet";
     public static String FAMILIENSTAND_GESCHIEDEN = "geschieden";
+
 
 
     private String name;

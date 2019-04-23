@@ -2,11 +2,13 @@ package uebungen.kapitel10.meldeamt;
 
 import java.io.*;
 import java.util.Iterator;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class Listenoperationen {
 
     private static final String FILENAME = "EinwohnerListe.txt";
+    private static final String FILENAME_SERIALIZE = "EinwohnerListe.dat";
     private static TreeSet<Einwohner> liste = new TreeSet<Einwohner>();
 
     private static Einwohner ermittleObjekt(String name, String vorname){
@@ -79,5 +81,115 @@ public class Listenoperationen {
         }else{
             System.out.println("Die Liste ist leer!");
         }
+    }
+
+    public static void persistSetToFile()  {
+
+        File einwohnerFile = new File(FILENAME);
+
+        if(!einwohnerFile.exists()){
+            try {
+                einwohnerFile.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try (FileWriter einwohnerFileWriter = new FileWriter(einwohnerFile, false)) {
+
+            for(Einwohner einwohner : liste){
+                String einwohnerAsText = einwohner.getName() + ";";
+                einwohnerAsText = einwohnerAsText + einwohner.getVorname() + ";";
+                einwohnerAsText = einwohnerAsText + einwohner.getGebName() + ";";
+                einwohnerAsText = einwohnerAsText + einwohner.getAnrede() + ";";
+                einwohnerAsText = einwohnerAsText + einwohner.getEmail() + ";";
+                einwohnerAsText = einwohnerAsText + einwohner.getFamilienstand() + ";";
+                einwohnerAsText = einwohnerAsText + einwohner.hashCode() + "\n";
+
+                einwohnerFileWriter.write(einwohnerAsText);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void persistSewrializedSetToFile()  {
+
+        File einwohnerFile = new File(FILENAME_SERIALIZE);
+
+        if(!einwohnerFile.exists()){
+            try {
+                einwohnerFile.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try (FileOutputStream einwohnerOutputStream = new FileOutputStream(einwohnerFile);
+            ObjectOutputStream einwohnerSetObjectOutputStream = new ObjectOutputStream(einwohnerOutputStream)) {
+
+            einwohnerSetObjectOutputStream.writeObject(liste);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void readSetFromFile(){
+        File einwohnerFile = new File(FILENAME);
+
+        if(einwohnerFile.exists()){
+
+            try(FileReader einwohnerFileReader = new FileReader(einwohnerFile);
+                BufferedReader bufferedEinwohnerReader = new BufferedReader(einwohnerFileReader)){
+
+                String line;
+                while((line = bufferedEinwohnerReader.readLine()) != null){
+                    String[] einwohnerParts = line.split(";");
+                    Einwohner einwohner = new Einwohner(einwohnerParts[0],
+                                                        einwohnerParts[1],
+                                                        einwohnerParts[2],
+                                                        einwohnerParts[4],
+                                                        einwohnerParts[3],
+                                                        einwohnerParts[5]);
+
+                    if(einwohner.hashCode() == Integer.parseInt(einwohnerParts[6])){
+                        liste.add(einwohner);
+                    }
+                }
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
+    public static void readSerializedSetFromFile(){
+        File einwohnerFile = new File(FILENAME_SERIALIZE);
+
+        if(einwohnerFile.exists()){
+            try(FileInputStream einwohnerInputStream = new FileInputStream(einwohnerFile);
+                    ObjectInputStream einwohnerSetStream = new ObjectInputStream(einwohnerInputStream)){
+
+                liste = (TreeSet<Einwohner>)einwohnerSetStream.readObject();
+
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+        }
+
     }
 }

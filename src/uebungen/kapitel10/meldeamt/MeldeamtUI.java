@@ -86,6 +86,8 @@ public class MeldeamtUI extends JFrame {
                 } else if (action.equals(ACTION_SHOWLIST)) {
                     Listenoperationen.listeAusgeben();
                 } else if (action.equals(ACTION_CLOSE)) {
+                    Listenoperationen.persistSetToFile();
+                    Listenoperationen.persistSewrializedSetToFile();
                     System.exit(0);
                 }
 
@@ -272,6 +274,8 @@ public class MeldeamtUI extends JFrame {
     }
 
     public static void main(String[] args) {
+        //Listenoperationen.readSetFromFile();
+        Listenoperationen.readSerializedSetFromFile();
         new MeldeamtUI("Einwohnermeldeamt");
 
 
