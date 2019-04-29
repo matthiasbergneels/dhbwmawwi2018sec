@@ -5,8 +5,10 @@ import kapitel9.Student;
 public class LinkedListStudent {
 
     private Node firstNode = null;
+    private int size = 0;
 
     public void add(Student data){
+        size++;
         if(firstNode == null){
             firstNode = new Node(data);
             return;
@@ -22,13 +24,29 @@ public class LinkedListStudent {
 
     public Student remove(int studentId){
         if(firstNode != null){
+            if(firstNode.getData().getStudentId() == studentId){
+                Student data = firstNode.getData();
+                firstNode = firstNode.getNextNode();
+                size--;
+                return data;
+            }
+
             Node currentNode = firstNode;
-            while(currentNode.getData().getStudentId() != studentId){
+            while(currentNode.getNextNode() != null) {
+                if(currentNode.getNextNode().getData().getStudentId() == studentId){
+                    Student data = currentNode.getNextNode().getData();
+                    currentNode.setNextNode(currentNode.getNextNode().getNextNode());
+                    size--;
+                    return data;
+                }
                 currentNode = currentNode.getNextNode();
             }
-            
         }
         return null;
+    }
+
+    public int size(){
+        return size;
     }
 
     private class Node{
