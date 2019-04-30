@@ -60,6 +60,40 @@ public class BinaryTree<T extends Comparable> {
     }
 
 
+    public void printPreorder(){
+        if(root != null){
+            printPreorder(root);
+        }else{
+            System.out.println("Empty Tree");
+        }
+    }
+
+    // pre-order
+    private void printPreorder(Node<T> currentNode){
+        System.out.println(currentNode.getData());
+        if(currentNode.getLeftNode() != null){
+            print(currentNode.getLeftNode());
+        }
+        if(currentNode.getRightNode() != null){
+            print(currentNode.getRightNode());
+        }
+    }
+
+    public BinaryTree<T> copyTree(BinaryTree<T> newTree){
+        return copyTree(newTree, root);
+    }
+
+    public BinaryTree<T> copyTree(BinaryTree<T> newTree, Node<T> currentNode){
+        newTree.add(currentNode.getData());
+        if(currentNode.getLeftNode() != null){
+            copyTree(newTree, currentNode.getLeftNode());
+        }
+        if(currentNode.getRightNode() != null){
+            copyTree(newTree, currentNode.getRightNode());
+        }
+        return newTree;
+    }
+
     public int size(){
         return size;
     }

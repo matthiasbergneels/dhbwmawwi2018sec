@@ -13,7 +13,11 @@ public class BinaryTreeTest {
         names.add("Franz");
 
         System.out.println("Anzahl Namen: " + names.size());
+        System.out.println("In-Order:");
         names.print();
+
+        System.out.println("Pre-Order:");
+        names.printPreorder();
 
 
         BinaryTree numbers = new BinaryTree();
@@ -26,6 +30,19 @@ public class BinaryTreeTest {
         numbers.add(25);
 
         System.out.println("Anzahl Zahlen: " + numbers.size());
+        System.out.println("In-Order:");
         numbers.print();
+
+        System.out.println("Pre-Order:");
+        numbers.printPreorder();
+
+
+        BinaryTree<String> names2 = names.copyTree(new BinaryTree<String>());
+        System.out.println("Anzahl Namen2: " + names2.size());
+        System.out.println("In-Order:");
+        names2.print();
+
+        System.out.println("Pre-Order:");
+        names2.printPreorder();
     }
 }
