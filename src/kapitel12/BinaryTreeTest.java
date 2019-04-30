@@ -27,6 +27,7 @@ public class BinaryTreeTest {
         numbers.add(90);
         numbers.add(30);
         numbers.add(40);
+        numbers.add(90);
         numbers.add(25);
 
         System.out.println("Anzahl Zahlen: " + numbers.size());

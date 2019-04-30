@@ -72,10 +72,10 @@ public class BinaryTree<T extends Comparable> {
     private void printPreorder(Node<T> currentNode){
         System.out.println(currentNode.getData());
         if(currentNode.getLeftNode() != null){
-            print(currentNode.getLeftNode());
+            printPreorder(currentNode.getLeftNode());
         }
         if(currentNode.getRightNode() != null){
-            print(currentNode.getRightNode());
+            printPreorder(currentNode.getRightNode());
         }
     }
 
